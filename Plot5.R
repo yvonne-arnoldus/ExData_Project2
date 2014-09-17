@@ -29,7 +29,7 @@ run <-function()  {
     print(plot)
     
     # save barplot as png
-    png("figure/plot5.png", width = 480, height = 480, bg="transparent")
+    png("figure/plot5.png", width = 580, height = 480, bg="transparent")
     print(plot)
     dev.off()       
 }
