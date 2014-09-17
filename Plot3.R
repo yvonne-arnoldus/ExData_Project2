@@ -1,5 +1,6 @@
 run <-function()  {
     
+    # import ggplot library
     library(ggplot2)
     
     # Import rds files to dataframes NEI and SCC
@@ -18,7 +19,7 @@ run <-function()  {
     plot <- ggplot(data=data, aes(x=factor(year), y=Emissions, fill=type))
     plot <- plot + geom_bar(stat="identity", position="dodge")
     plot <- plot + xlab("years") + ylab("Emission") + ggtitle("Total emissions in Baltimore City per emission type")
-    plot
+    print(plot)
     
     # save barplot is png
     png("figure/plot3.png", width = 480, height = 480, bg="transparent")

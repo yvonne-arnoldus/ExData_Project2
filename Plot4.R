@@ -1,5 +1,8 @@
 run <-function()
 {
+    # import ggplot library
+    library(ggplot2)
+    
     # Import rds files to dataframes NEI and SCC
     source("ImportData.R")
     
@@ -20,7 +23,7 @@ run <-function()
     plot <- ggplot(data=data, aes(x=factor(year), y=Emissions, fill=EI.Sector))
     plot <- plot + geom_bar(stat="identity", position="dodge")
     plot <- plot + xlab("years") + ylab("Emission") + ggtitle("Coal combustion-related emission in the US")
-    plot
+    print(plot)
     
     # save barplot as png
     png("figure/plot4.png", width = 480, height = 480, bg="transparent")
